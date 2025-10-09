@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cửa hàng MiniMart</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header>
+    <h1>MiniMart</h1>
+    <div class="user-info">
+      <span id="userDisplay"></span>
+      <button onclick="logout()">Đăng xuất</button>
+      <a href="cart.html">🛒 Giỏ hàng</a>
+    </div>
+  </header>
+
+  <main>
+    <h2>Sản phẩm</h2>
+    <div class="product-list">
+      <div class="product">
+        <h3>Táo đỏ nhập khẩu</h3>
+        <p>Giá: 15.000₫</p>
+        <button onclick="addToCart('Táo đỏ nhập khẩu', 15000)">Thêm vào giỏ</button>
+      </div>
+      <div class="product">
+        <h3>Chuối chín vàng</h3>
+        <p>Giá: 10.000₫</p>
+        <button onclick="addToCart('Chuối chín vàng', 10000)">Thêm vào giỏ</button>
+      </div>
+      <div class="product">
+        <h3>Cam sành Việt Nam</h3>
+        <p>Giá: 20.000₫</p>
+        <button onclick="addToCart('Cam sành Việt Nam', 20000)">Thêm vào giỏ</button>
+      </div>
+            <div class="product">
+        <h3>Bánh quy bơ</h3>
+        <p>Giá: 25.000₫</p>
+        <button onclick="addToCart('Bánh quy bơ', 25000)">Thêm vào giỏ</button>
+      </div>
+            <div class="product">
+        <h3>Sữa tươi tiệt trùng</h3>
+        <p>Giá: 18.000₫</p>
+        <button onclick="addToCart('Sữa tươi tiệt trùng', 18000)">Thêm vào giỏ</button>
+      </div>
+            <div class="product">
+        <h3>Mì ăn liền Hảo Hảo</h3>
+        <p>Giá: 8.000₫</p>
+        <button onclick="addToCart('Mì ăn liền Hảo Hảo', 8000)">Thêm vào giỏ</button>
+      </div>
+            <div class="product">
+        <h3>Nước ngọt Pepsi lon</h3>
+        <p>Giá: 12.000₫</p>
+        <button onclick="addToCart('Nước ngọt Pepsi lon', 12000)">Thêm vào giỏ</button>
+      </div>
+            <div class="product">
+        <h3>Gạo thơm ST25</h3>
+        <p>Giá: 30.000₫</p>
+        <button onclick="addToCart('Gạo thơm ST25', 30000)">Thêm vào giỏ</button>
+      </div>
+            <div class="product">
+        <h3>Dầu ăn Tường An</h3>
+        <p>Giá: 40.000₫</p>
+        <button onclick="addToCart('Dầu ăn Tường An', 40000)">Thêm vào giỏ</button>
+      </div>
+            <div class="product">
+        <h3>Trứng gà ta (vỉ 10 quả)</h3>
+        <p>Giá: 25.000₫</p>
+        <button onclick="addToCart('Trứng gà ta (vỉ 10 quả)', 25000)">Thêm vào giỏ</button>
+      </div>
+    </div>
+  </main>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
