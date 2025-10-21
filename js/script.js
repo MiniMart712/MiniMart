@@ -73,7 +73,7 @@ if (loginBtn) {
     if (user) {
       alert("Đăng nhập thành công!");
       localStorage.setItem("currentUser", email);
-      window.location.href = "shop.html";
+      window.location.href = "index.html";
     } else {
       alert("Sai email hoặc mật khẩu!");
     }
@@ -119,3 +119,34 @@ if (cartItems) {
   });
   document.getElementById("totalPrice").textContent = `Tổng: ${total}đ`;
 }
+
+const apiKey = "618988e9eab1244471c47c6ad90a5ac5";
+
+document.getElementById("getWeatherBtn").addEventListener("click", () => {
+  const city = document.getElementById("cityInput").value.trim();
+  if (city === "") {
+    alert("Vui lòng nhập tên thành phố!");
+    return;
+  }
+
+  const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric&lang=vi`;
+
+  fetch(url)
+    .then(response => {
+      if (!response.ok) throw new Error("Không tìm thấy thành phố!");
+      return response.json();
+    })
+    .then(data => {
+      const temp = Math.round(data.main.temp);
+      const desc = data.weather[0].description;
+      const icon = data.weather[0].icon;
+      document.getElementById("weatherResult").innerHTML = `
+        <img src="https://openweathermap.org/img/wn/${icon}.png" alt="">
+        <span>${city}: ${temp}°C - ${desc}</span>
+      `;
+    })
+    .catch(error => {
+      document.getElementById("weatherResult").innerHTML =
+        `<span style="color:red;">${error.message}</span>`;
+    });
+});
