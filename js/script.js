@@ -73,7 +73,7 @@ if (loginBtn) {
     if (user) {
       alert("Đăng nhập thành công!");
       localStorage.setItem("currentUser", email);
-      window.location.href = "index.html";
+      window.location.href = "main.html";
     } else {
       alert("Sai email hoặc mật khẩu!");
     }
@@ -83,7 +83,7 @@ if (loginBtn) {
 // ======== ĐĂNG XUẤT ========
 function logout() {
   localStorage.removeItem("currentUser");
-  window.location.href = "index.html";
+  window.location.href = "main.html";
 }
 
 // ======== LOAD TỰ ĐỘNG ========
