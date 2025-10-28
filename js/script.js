@@ -56,7 +56,7 @@ if (registerBtn) {
     users.push({ email, password });
     localStorage.setItem("users", JSON.stringify(users));
     alert("Đăng ký thành công! Hãy đăng nhập.");
-    window.location.href = "login.html";
+    window.location.href = "index.html";
   });
 }
 
@@ -83,7 +83,7 @@ if (loginBtn) {
 // ======== ĐĂNG XUẤT ========
 function logout() {
   localStorage.removeItem("currentUser");
-  window.location.href = "login.html";
+  window.location.href = "index.html";
 }
 
 // ======== LOAD TỰ ĐỘNG ========
