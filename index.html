@@ -1,41 +1,19 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>MiniMart - Trang chủ</title>
-    <link rel="stylesheet" href="css/style.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Đăng nhập MiniMart</title>
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-    <!-- 🔹 Thanh điều hướng -->
-    <nav class="navbar">
-        <h2 class="logo">MiniMart</h2>
-        <ul class="nav-links">
-            <li><a href="index.html">Trang chủ</a></li>
-            <li><a href="shop.html">Mua sắm</a></li>
-            <li><a href="cart.html">Giỏ hàng</a></li>
-            <li><a href="contact.html">Liên hệ</a></li>
-        </ul>
-    </nav>
-
-    <!-- 🔹 Nội dung chính -->
-    <section class="main">
-        <h1>Chào mừng đến với MiniMart</h1>
-        <p>Website bán hàng online</p>
-        <p>Trước tiên bạn có thể xem thời tiết nơi mình sống</p>
-        <p>Sau đó có thể con đồ dùng cần thiết</p>
-
-        <!-- Nhập tên thành phố để xem thời tiết -->
-        <div class="weather-section">
-            <input type="text" id="cityInput" placeholder="Nhập tên thành phố..." />
-            <button id="getWeatherBtn">OK</button>
-            <div id="weatherResult"></div>
-        </div>
-    </section>
-    <footer>
-    <p>© 2025 MiniMart - All rights reserved.</p>
-  </footer>
-
-    <script src="js/script.js"></script>
+  <div class="container">
+    <h1>Đăng nhập MiniMart</h1>
+    <input type="email" id="loginEmail" placeholder="Email" />
+    <input type="password" id="loginPassword" placeholder="Mật khẩu" />
+    <button id="loginBtn">Đăng nhập</button>
+    <p>Chưa có tài khoản? <a href="register.html">Đăng ký ngay</a></p>
+  </div>
+  <script src="js/script.js"></script>
 </body>
 </html>
